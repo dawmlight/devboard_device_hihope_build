@@ -1,0 +1,10 @@
+{
+    "subsystem": "hihope_products",
+    "parts": {
+        "hihope_products": {
+            "module_list": [
+                "//device/hihope/build:products_group"
+            ]
+        }
+    }
+}
