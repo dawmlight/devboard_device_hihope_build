@@ -30,7 +30,7 @@ sudo apt-get update && sudo apt-get install binutils git git-lfs gnupg flex biso
 
 1.  注册码云gitee账号。
 2.  注册码云SSH公钥，请参考[码云帮助中心](https://gitee.com/help/articles/4191)。
-3.  安装[git客户端](http://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)和[git-lfs](https://gitee.com/vcs-all-in-one/git-lfs?_from=gitee_search#downloading))并配置用户信息。
+3.  安装[git客户端](http://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)和[git-lfs](https://gitee.com/vcs-all-in-one/git-lfs?_from=gitee_search#downloading)并配置用户信息。
 
     ```
     git config --global user.name "yourname"
@@ -52,7 +52,7 @@ sudo apt-get update && sudo apt-get install binutils git git-lfs gnupg flex biso
 方式一（推荐）：通过repo + ssh 下载（需注册公钥，请参考[码云帮助中心](https://gitee.com/help/articles/4191)）。
 
 ```
-repo init -u git@gitee.com:openharmony/manifest.git -b master -m devboard_dayu.xml --no-repo-verify
+repo init -u ssh://git@gitee.com/openharmony-sig/manifest.git -b master -m devboard_dayu.xml --no-repo-verify
 repo sync -c
 repo forall -c 'git lfs pull'
 ```
@@ -60,7 +60,7 @@ repo forall -c 'git lfs pull'
 方式二：通过repo + https 下载。
 
 ```
-repo init -u https://gitee.com/openharmony/manifest.git -b master -m devboard_dayu.xml --no-repo-verify
+repo init -u https://gitee.com/openharmony-sig/manifest.git -b master -m devboard_dayu.xml --no-repo-verify
 repo sync -c
 repo forall -c 'git lfs pull'
 ```
